@@ -24,7 +24,7 @@ const router = useRouter();
 
 const projects = ref([
   {
-    title: 'Project One',
+    title: 'Mold Detector',
     description: 'Description of project one.',
     image: 'path/to/project-one-image.jpg', // Replace with actual image path
     link: 'https://drive.google.com/file/d/1Z3RKd3MxTPb098voyZGnzgnWJgtFUt9j/view?usp=drive_link'
