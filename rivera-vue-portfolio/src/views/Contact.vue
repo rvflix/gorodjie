@@ -5,6 +5,9 @@
       <button class="go-back" @click="goBack">Go Back to Dashboard</button>
     </header>
     <h2>To Contact Me, Kindly Leave A Message.</h2>
+    <p>
+      This message will be directed to my email.
+    </p>
     <form @submit.prevent="handleSubmit">
       <div class="form-group row">
         <div class="input-group">
