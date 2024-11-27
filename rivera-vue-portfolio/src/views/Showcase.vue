@@ -31,8 +31,7 @@ const projects = ref([
     description: 'Exploring Farmer Perspectives: Essential Features for an Advanced Farmer Monitoring System',
     img: {
       src: projectone,
-      alt: 'Project One',
-      class: 'projectone'
+      alt: 'Project One'
     },
     link: 'https://drive.google.com/file/d/1Z3RKd3MxTPb098voyZGnzgnWJgtFUt9j/view?usp=drive_link'
   },
@@ -41,8 +40,7 @@ const projects = ref([
     description: 'A COMPUTERIZED WEB-BASED ORDERING SYSTEM WITH CHAT-BOT CUSTOMER SERVICE FOR RESTAURANT AMARI’S',
     img: {
       src: projecttwo,
-      alt: 'Project Two',
-      class: 'projecttwo'
+      alt: 'Project Two'
     },
     link: 'https://drive.google.com/file/d/1YAqTNMzQl0Mm4tfjO_4N1zKbkoobvgCq/view?usp=drive_link'
   },
@@ -51,8 +49,7 @@ const projects = ref([
     description: 'A mobile application using Android Studio with Java for both the frontend and backend, providing a comprehensive platform that includes user access, admin access, and super admin access.',
     img: {
       src: projectthree,
-      alt: 'Project Three',
-      class: 'projectthree'
+      alt: 'Project Three'
     },
     link: 'https://drive.google.com/file/d/1cdoNkyeAeuDZmFy7Xpz74kqaMGrYCqkg/view?usp=drive_link'
   },
@@ -70,68 +67,110 @@ const logout = async () => {
     await router.push('/'); // Redirect to the login page
   }
 };
-
 </script>
 
 <style scoped>
-h2 {
-  color: rgb(178, 178, 187);
-}
-
-.project-card h3,
-.project-card p {
-  color: rgb(178, 178, 187);
-}
-
-.project-title {
-  font-weight: bold; /* Make project titles bold */
-}
-
 .showcase {
   text-align: center;
   padding: 2rem;
-  background-color: #101446;
-  min-height: 100vh;
+  
+  /* Fullscreen settings */
+  background-image: url('@/assets/background.gif'); /* Background GIF */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  position: fixed; /* Fixed positioning to cover entire screen */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  min-height: 100vh; /* Ensure it covers full height */
+  width: 100vw; /* Full width */
+  
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0); /* Lighten header background */
+  padding: .5rem; /* Add padding for better spacing */
+  
+}
+
+h2 {
+  color: rgb(229, 229, 231);
+  font-size: 3rem; /* Increase font size for the heading */
+}
+
+p {
+   color: rgb(229, 229, 231);
+   
+   font-size: calc(1.5rem); /* Increase size of paragraph text */
+}
+
+h3 {
+   color: rgb(229, 229, 231);
+   font-size: calc(1.5rem); /* Increase size of paragraph text */
+}
+
+a {
+   color: rgb(229, 229, 231);
+   font-size: calc(1.5rem); /* Increase size of paragraph text */
+   margin-top: .5rem; /* Add some space above the link */
+   display:inline-block; /* Ensure it behaves like a block element for better spacing */
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
+   display: flex;
+   justify-content: center; /* Center the project cards horizontally */
+   flex-wrap: wrap; /* Allow wrapping of project cards */
 }
 
 .project-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 10px;
-  width: calc(33% - 20px);
+   background-color: #121c77;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   margin: calc(10px); /* Space between cards */
+   padding: calc(10px); 
+   width: calc(30% - 20px); /* Adjust width for three cards per row with margin */
 }
 
 .project-card img {
    width:100%; /* Ensure images take full width of the card */
-   height:150px; /* Set a fixed height for uniformity */
+   height:auto; /* Maintain aspect ratio */
+   max-height:300px; /* Set a fixed height for uniformity */
    object-fit: cover; /* Crop images to fit within the specified dimensions */
+   border-radius:8px; /* Rounded corners for images */
 }
 
-.logout-link {
-   color: blue;
+.project-card h3,
+.project-card p {
+   color: rgb(178,178,187);
 }
+
+.project-title {
+   font-weight:bold; /* Make project titles bold */
+}
+
+.logout-link,
 .go-back {
-   margin-left: auto;
-   background-color: #2600ff;
-   color: white;
-   border-radius: 4px;
-   border: none;
-   padding:.5rem;
-   cursor:pointer;
+   background-color: #2600ff; 
+   color: white; 
+   border-radius: 4px; 
+   border: none; 
+   padding: .5rem .75rem; 
+   cursor: pointer; 
+   display: inline-block; /* Ensure it behaves like a block element */
+   text-align: center; /* Center text within the link */
+   text-decoration: none; /* Remove underline from link */
+   font-size: 1rem; /* Set a consistent font size */
+   line-height: 1.5; /* Set a consistent line height */
 }
-.go-back:hover {
-   background-color:#0056b3; 
+
+.header {
+  display: flex; /* Use flexbox for header layout */
+  justify-content: space-between; /* Space between logout and go back buttons */
+  align-items: center; /* Center items vertically */
+  padding: .5rem; /* Add padding for better spacing */
 }
 </style>

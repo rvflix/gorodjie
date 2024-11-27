@@ -5,10 +5,8 @@
       <button class="go-back" @click="goBack">Go Back to Dashboard</button>
     </header>
     <h2>To Contact Me, Kindly Leave A Message.</h2>
-    <p>
-      This message will be directed to my email.
-    </p>
-    <form @submit.prevent="handleSubmit">
+    <p>This message will be directed to my email.</p>
+    <form @submit.prevent="handleSubmit" class="contact-form">
       <div class="form-group row">
         <div class="input-group">
           <label for="name">Name:</label>
@@ -89,78 +87,122 @@ const logout = async () => {
     await router.push('/'); // Redirect to the login page
   }
 };
-
 </script>
 
 <style scoped>
 .contact {
   text-align: center;
   padding: 2rem;
-  background-color: #101446; /* Dark background color */
+  
+  /* Fullscreen settings */
+  background-image: url('@/assets/background.gif'); /* Background GIF */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  position: fixed; /* Fixed positioning to cover entire screen */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
   min-height: 100vh; /* Ensure it covers full height */
+  width: 100vw; /* Full width */
+  
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
 .header {
-  display: flex; /* Use flexbox for header layouat */
+  display: flex; /* Use flexbox for header layout */
   justify-content: space-between; /* Space between logout and go back buttons */
   align-items: center; /* Center items vertically */
+  padding: .5rem; /* Add padding for better spacing */
 }
 
 h2 {
-  font-size: 2rem; /* Increase font size for the heading */
+  color:rgb(229, 229, 231);
+  font-size: 3rem; /* Increase font size for the heading */
+  background-color: rgba(48, 48, 48, 0.781);
+  
+}
+
+p {
+  color: rgb(229, 229, 231);
+  background-color: rgba(48, 48, 48, 0.781);
+  font-size: calc(1.5rem); /* Increase size of paragraph text */
+}
+
+.contact-form {
+   color: rgb(229, 229, 231); /* Set color for paragraph text */
+   background-color: rgba(48, 48, 48, 0.781); /* Slightly transparent background for form area */
+   border-radius:10px; /* Rounded corners */
+   padding:2rem; /* Padding inside the form area */
+   margin-top: calc(20px); /* Space above the form area */
+   height: 400px;
+   width: 700px; 
+   max-width:700px; /* Set a maximum width for consistency */
+   box-shadow: 0px 4px 15px rgba(0,0,0,0.5); /* Shadow effect for depth */
+
+   align-self: center; /* Center the form horizontally within contact container */
 }
 
 .form-group {
-  margin-bottom: 15px;
+   margin-bottom: 15px;
 }
 
 .row {
-  display: flex; /* Use flexbox for row layout */
-  justify-content: space-between; /* Space between input groups */
+   display: flex; /* Use flexbox for row layout */
+   justify-content: space-between; /* Space between input groups */
 }
 
 .input-group {
-  flex: 1; /* Allow input groups to grow equally */
-  margin-right: 10px; /* Space between input groups */
+   flex: 1; /* Allow input groups to grow equally */
+   margin-right: 10px; /* Space between input groups */
 }
 
 .input-group:last-child {
-  margin-right: 0; /* Remove margin from last input group */
+   margin-right: 0; /* Remove margin from last input group */
 }
 
 input, textarea {
-  width: calc(100% - 10px); /* Full width minus padding */
+   width: calc(100% - 10px); /* Full width minus padding */
+   border-radius:4px; /* Rounded corners for inputs and textarea */
+   border:none; /* No border style */
+   padding:.5rem; /* Padding inside inputs and textarea */
 }
 
 textarea {
-  height: 150px; /* Increased height for message box */
+   height: 150px; /* Increased height for message box */
 }
 
 button {
-  margin-top: 1rem; /* Space above the button */
+   margin-top: 1rem; /* Space above the button */
+   background-color:#2600ff; 
+   color:white;
+   border:none;
+   border-radius:4px;
+   padding:.5rem .75rem;
+   cursor:pointer;
+}
+button:hover {
+   background-color:#0056b3; 
 }
 
 .social-links {
-  margin-top: 2rem; /* Space above social links */
+   margin-top: 2rem; /* Space above social links */
 }
 
 .social-links a {
-  margin: 0 10px;
+   margin: 0 10px;
 }
 
-.logout-link {
-  color: blue; /* Change the color of the logout link to blue */
-}
+.logout-link,
 .go-back {
-   margin-left: auto; /* Pushes the Go Back button to the right */
-   background-color: #2600ff; /* Background color for Go Back button */
-   color: white; /* Text color for Go Back button */
-   border-radius: 4px; /* Rounded corners */
-   border: none; /* No border */
-   padding: .5rem; /* Padding for button */
-   cursor:pointer; /* Pointer cursor on hover */
+   background-color:#2600ff; 
+   color:white; 
+   border-radius:4px; 
+   border:none; 
+   padding:.5rem .75rem; 
+   cursor:pointer; 
 }
+.logout-link:hover,
 .go-back:hover {
-   background-color:#0056b3; /* Darker shade on hover */
+   background-color:#0056b3; 
 }
 </style>
