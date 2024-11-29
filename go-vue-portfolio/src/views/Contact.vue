@@ -38,7 +38,7 @@ import { useRouter } from 'vue-router';
 import emailjs from '@emailjs/browser';
 
 // Initialize EmailJS with your public key
-emailjs.init('GDOWu0bw1EUepiPZZ'); // Replace with your actual public key
+emailjs.init('Pww8VkAF4sdB3pjv_'); // Replace with your actual public key
 
 const router = useRouter();
 
@@ -70,8 +70,8 @@ const handleSubmit = () => {
 
 // Social links data
 const socialLinks = [
-  { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=100006452162071' },
-  { name: 'Instagram', url: 'https://www.instagram.com/grbg.gb/' },
+  { name: 'Facebook', url: 'https://www.facebook.com/rodjieven.f.go' },
+  { name: 'Instagram', url: 'https://www.instagram.com/rv_flrsgo/profilecard/?igsh=Y3lpMXg1Y3QzZGMz' },
 ];
 
 // Function to navigate back to the dashboard
@@ -92,117 +92,167 @@ const logout = async () => {
 <style scoped>
 .contact {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   
   /* Fullscreen settings */
   background-image: url('@/assets/background.gif'); /* Background GIF */
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   position: fixed; /* Fixed positioning to cover entire screen */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
   min-height: 100vh; /* Ensure it covers full height */
   width: 100vw; /* Full width */
   
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
 
 .header {
   display: flex; /* Use flexbox for header layout */
   justify-content: space-between; /* Space between logout and go back buttons */
   align-items: center; /* Center items vertically */
-  padding: .5rem; /* Add padding for better spacing */
+  width: 100%; /* Ensure header spans the full width */
+  padding: 1rem;
+  z-index: 10;
 }
 
 h2 {
-  color:rgb(229, 229, 231);
-  font-size: 3rem; /* Increase font size for the heading */
-  background-color: rgba(48, 48, 48, 0.781);
-  
+  color: rgb(229, 229, 231);
+  font-size: 2rem; /* Slightly reduced font size */
+  background-color: rgba(48, 48, 48, 0.7); /* Semi-transparent background */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 1rem;
+  max-width: 80%; /* Make the heading text more compact */
 }
 
 p {
   color: rgb(229, 229, 231);
-  background-color: rgba(48, 48, 48, 0.781);
-  font-size: calc(1.5rem); /* Increase size of paragraph text */
+  background-color: rgba(48, 48, 48, 0.7);
+  font-size: 1.2rem; /* Slightly reduced font size */
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  max-width: 80%;
 }
 
 .contact-form {
-   color: rgb(229, 229, 231); /* Set color for paragraph text */
-   background-color: rgba(48, 48, 48, 0.781); /* Slightly transparent background for form area */
-   border-radius:10px; /* Rounded corners */
-   padding:2rem; /* Padding inside the form area */
-   margin-top: calc(20px); /* Space above the form area */
-   height: 400px;
-   width: 700px; 
-   max-width:700px; /* Set a maximum width for consistency */
-   box-shadow: 0px 4px 15px rgba(0,0,0,0.5); /* Shadow effect for depth */
-
-   align-self: center; /* Center the form horizontally within contact container */
+  background-color: rgba(48, 48, 48, 0.7); /* Slightly transparent background for form area */
+  color: rgb(229, 229, 231); /* Set color for text */
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  max-width: 500px; /* Reduced width for better fitting */
+  width: 100%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect for depth */
 }
 
 .form-group {
-   margin-bottom: 15px;
+  margin-bottom: 12px; /* Reduced space between form fields */
 }
 
 .row {
-   display: flex; /* Use flexbox for row layout */
-   justify-content: space-between; /* Space between input groups */
+  display: flex; /* Use flexbox for row layout */
+  justify-content: space-between; /* Space between input groups */
+  flex-wrap: wrap; /* Allow wrapping of input groups */
 }
 
 .input-group {
-   flex: 1; /* Allow input groups to grow equally */
-   margin-right: 10px; /* Space between input groups */
+  flex: 1; /* Allow input groups to grow equally */
+  margin-right: 8px; /* Space between input groups */
 }
 
 .input-group:last-child {
-   margin-right: 0; /* Remove margin from last input group */
+  margin-right: 0; /* Remove margin from last input group */
 }
 
 input, textarea {
-   width: calc(100% - 10px); /* Full width minus padding */
-   border-radius:4px; /* Rounded corners for inputs and textarea */
-   border:none; /* No border style */
-   padding:.5rem; /* Padding inside inputs and textarea */
+  width: 100%; /* Full width */
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Add border to input fields */
+  background-color: rgba(255, 255, 255, 0.9); /* Light background color */
+  font-size: 1.2rem; /* Larger text for better readability */
+  margin-bottom: 12px; /* Space between input fields */
 }
 
 textarea {
-   height: 150px; /* Increased height for message box */
+  height: 120px; /* Reduced height for the textarea */
+  resize: vertical; /* Allow resizing of textarea */
 }
 
 button {
-   margin-top: 1rem; /* Space above the button */
-   background-color:#2600ff; 
-   color:white;
-   border:none;
-   border-radius:4px;
-   padding:.5rem .75rem;
-   cursor:pointer;
+  background-color: #2600ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
 }
+
 button:hover {
-   background-color:#0056b3; 
+  background-color: #0056b3; /* Darken the button color on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Outline effect when focused */
 }
 
 .social-links {
-   margin-top: 2rem; /* Space above social links */
+  margin-top: 1rem; /* Space above social links */
+  display: flex; /* Arrange links horizontally */
+  justify-content: center; /* Center links */
+  gap: 15px; /* Space between links */
+}
+
+.social-links h3 {
+  font-size: 1.2rem; /* Font size for social links title */
+  color: rgb(229, 229, 231);
 }
 
 .social-links a {
-   margin: 0 10px;
+  margin: 0;
+  color: rgb(229, 229, 231); /* Color for social links */
+  font-size: 1.2rem; /* Font size for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #2600ff; /* Color change on hover */
 }
 
 .logout-link,
 .go-back {
-   background-color:#2600ff; 
-   color:white; 
-   border-radius:4px; 
-   border:none; 
-   padding:.5rem .75rem; 
-   cursor:pointer; 
+  background-color: #2600ff;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .logout-link:hover,
 .go-back:hover {
-   background-color:#0056b3; 
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
+.logout-link:focus,
+.go-back:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Outline effect when focused */
+}
+
+
 </style>
