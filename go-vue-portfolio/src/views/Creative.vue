@@ -35,16 +35,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import photography from '@/assets/billiards.jpeg';
-import cycling from '@/assets/rides.jpeg';
-import traveling from '@/assets/workout.jpeg';
+import billiards from '@/assets/billiards.jpg';
+import rides from '@/assets/rides.jpg';
+import workout from '@/assets/workout.jpg';
 import basketball from '@/assets/basketball.jpg';
 
 // Define hobbies with additional details
 const hobbies = [
-  { name: 'Billiards', image: photography, details: 'In billiards, it’s not the shot you make, but the one you plan.' },
-  { name: 'Rides', image: cycling, details: 'Sometimes, the best therapy is a long ride and a quiet mind.' },
-  { name: 'Workout', image: traveling, details: 'The pain you feel today will be the strength you feel tomorrow.' },
+  { name: 'Billiards', image: billiards, details: 'In billiards, it’s not the shot you make, but the one you plan.' },
+  { name: 'Rides', image: rides, details: 'Sometimes, the best therapy is a long ride and a quiet mind.' },
+  { name: 'Workout', image: workout, details: 'The pain you feel today will be the strength you feel tomorrow.' },
   { name: 'Basketball', image: basketball, details: 'The game isn’t over until the final buzzer sounds.' },
 ];
 
