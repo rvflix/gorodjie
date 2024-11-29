@@ -55,7 +55,7 @@ const handleSubmit = () => {
   };
 
   // Send the email using EmailJS
-  emailjs.send('grbg.gab', 'template_erv7jsq', templateParams)
+  emailjs.send('service_wyb9rab', 'template_j2w7ljc', templateParams)
     .then((response) => {
       alert('Message sent successfully!');
       // Clear the form fields
@@ -101,13 +101,18 @@ const logout = async () => {
   position: fixed; /* Fixed positioning to cover entire screen */
   top: 0; /* Align to top */
   left: 0; /* Align to left */
-  min-height: 100vh; /* Ensure it covers full height */
+
   width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
   
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center content vertically */
+  justify-content: flex-start; /* Start content at the top */
   align-items: center; /* Center content horizontally */
+  
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
 .header {
@@ -117,6 +122,9 @@ const logout = async () => {
   width: 100%; /* Ensure header spans the full width */
   padding: 1rem;
   z-index: 10;
+  background-color: rgba(48, 48, 48, 0.8); /* Add a background to the header for better readability */
+  position: sticky; /* Make header stick to the top when scrolling */
+  top: 0; /* Align to the top of the viewport */
 }
 
 h2 {
@@ -253,6 +261,4 @@ button:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Outline effect when focused */
 }
-
-
 </style>

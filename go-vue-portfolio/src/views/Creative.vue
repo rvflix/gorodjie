@@ -82,7 +82,19 @@ const logout = async () => {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Ensure the fixed container doesn't scroll */
 }
+
+.content {
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 100%; /* Ensure it spans the width */
+  max-height: calc(100vh - 4rem); /* Prevent content from overflowing the screen */
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background for readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
 
 .header {
   display: flex;
@@ -177,4 +189,12 @@ h2 {
   background-color: #0056b3;
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .content {
+    max-height: calc(100vh - 6rem);
+    padding: 0.5rem;
+  }
+}
+
 </style>
