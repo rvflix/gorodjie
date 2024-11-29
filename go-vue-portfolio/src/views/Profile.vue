@@ -100,7 +100,6 @@ const logout = async () => {
   position: fixed; /* Fixed positioning for the entire screen */
   top: 0; /* Align to top */
   left: 0; /* Align to left */
-  overflow: hidden; /* Prevent scrolling */
 }
 
 .header {
