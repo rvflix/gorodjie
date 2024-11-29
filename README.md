@@ -1,4 +1,4 @@
-# Rivera Vue Portfolio
+# Go Vue Portfolio
 
 Welcome to my personal portfolio project! This repository showcases my skills and projects as a developer, built using Vue.js. Here, you will find information about the features of the portfolio, the technologies used, and how to set it up locally.
 
